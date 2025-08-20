@@ -12,6 +12,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
 app.use("/api/allowances", allowanceRoutes);
 app.use("/api/users", userRoutes);
 
